@@ -36,25 +36,25 @@ The portfolio showcases two engineering projects — **Cartier VR Store** and **
 
 ## Features
 
-### 🎨 UI & Theme
+### UI & Theme
 - **Bold & Creative** pastel color palette — pink, mint, lavender, peach, sky blue
 - **Dark / Light mode toggle** — state persisted via `localStorage`
 - **Scroll animations** — sections fade in using the `Intersection Observer API`
 - **Responsive layout** — tested on desktop, tablet, and mobile
 
-### 📁 Projects Section
+### Projects Section
 - Projects rendered dynamically from a JavaScript array
 - **Filter by category** — All / VR / UX / Web
 - **Sort** — Newest, Oldest, or A→Z
 - Each card has an expandable **View Details** section with project specifics
 - Color-coded tag badges per category
 
-### 🐙 GitHub Repositories (Live API)
+### GitHub Repositories (Live API)
 - Fetches repositories from `https://api.github.com/users/FatmahAlaamer/repos`
 - Displays: repo name, description, language, star count, and a direct link
 - Shows a user-friendly error message if the API is unavailable
 
-### 📬 Contact Form
+### Contact Form
 - Validates **three conditions** before allowing submission:
   1. Name field must not be empty
   2. Email must match a valid format (`user@domain.com`)
