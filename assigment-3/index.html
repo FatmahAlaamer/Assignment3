@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatimah Alaamer | Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><span>Fatimah's</span> Portfolio</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#github">GitHub</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <button id="theme-toggle">Night 🌙</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- HERO / ABOUT -->
+    <section id="about" class="hero">
+        <h1>Hi, I'm Fatimah Alaamer</h1>
+        <p class="tagline">Building digital experiences with code and curiosity.</p>
+        <p>I am a Software Engineering student at KFUPM. I enjoy solving complex problems and learning about the latest trends in AI-driven development.</p>
+
+        <!-- A3: Timer + Visit Counter -->
+        <div class="hero-meta">
+            <div class="hero-stat">
+                <span>Time on site</span>
+                <span class="stat-value" id="siteTimer">0:00</span>
+            </div>
+            <div class="hero-stat">
+                <span>Your visit #</span>
+                <span class="stat-value" id="visitCount">1</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h2>My Engineering &amp; UX Projects</h2>
+
+        <!-- A3: Filter + Sort bar -->
+        <div class="filter-bar">
+            <span class="filter-label">Filter:</span>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="VR">VR</button>
+            <button class="filter-btn" data-filter="UX">UX</button>
+            <button class="filter-btn" data-filter="Web">Web</button>
+            <select id="sortSelect">
+                <option value="newest">Sort: Newest</option>
+                <option value="oldest">Sort: Oldest</option>
+                <option value="az">Sort: A → Z</option>
+            </select>
+        </div>
+
+        <!-- Cards are rendered here by JS -->
+        <div class="project-grid" id="projectsGrid"></div>
+    </section>
+
+    <!-- A3: GITHUB REPOSITORIES -->
+    <section id="github">
+        <h2>GitHub Repositories</h2>
+        <p>Live data pulled from the GitHub API.</p>
+        <div id="githubRepos"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <p style="text-align:center; margin-bottom:2rem;">Have a question or want to work together? Send me a message!</p>
+
+        <form id="contact-form" novalidate>
+            <input type="text" id="name" placeholder="Your Name">
+            <span class="field-error" id="nameError">Please enter your name.</span>
+
+            <input type="email" id="email" placeholder="Your Email">
+            <span class="field-error" id="emailError">Please enter a valid email address.</span>
+
+            <textarea id="message" placeholder="Your Message" rows="5"></textarea>
+            <span class="field-error" id="msgError">Please write a message (minimum 10 characters).</span>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div id="form-feedback" style="display:none; text-align:center; margin-top:1rem; padding:1rem; border-radius:8px;"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Fatimah Alaamer. Built for SWE363.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
